@@ -6,7 +6,19 @@
     <script src="https://unpkg.com/http-vue-loader"></script>
   </head>
 
-  <div id="app">I'm yuma!</div>
+  <div id="app">
+    <div class="main">I'm yuma!</div>
+  </div>
+
+  <style>
+    .main {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 
   <script>
     const router = new VueRouter({

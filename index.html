@@ -19,13 +19,14 @@
           },
         },
         {
-          path: "/page2",
-          template: "何もないよ",
+          path: "/hello",
+          template: "<div>hello</div>",
         },
       ],
     });
     const app = new Vue({
       el: "#app",
+      title: "yuma page",
       router,
     }).$mount("#app");
   </script>

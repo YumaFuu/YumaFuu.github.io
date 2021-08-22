@@ -1,12 +1,25 @@
-<div id="app">
-  {{ message }}
-</div>
+<div id="app">hello</div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <script>
-  var app = new Vue({
-    el: "#app",
-    data: {
-      message: "Hello Vue!",
-    },
+  const router = new VueRouter({
+    mode: "history",
+    routes: [
+      {
+        path: "/line",
+        beforeEnter(to, from, next) {
+          window.location = "http://line.com";
+        },
+      },
+      {
+        path: "/page2",
+        template: "何もないよ",
+      },
+    ],
   });
+  const app = new Vue({
+    el: "#app",
+    router: router,
+  }).$mount("#app");
 </script>

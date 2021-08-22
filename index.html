@@ -1,25 +1,31 @@
-<div id="app">hello</div>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+  </head>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-<script>
-  const router = new VueRouter({
-    mode: "history",
-    routes: [
-      {
-        path: "/line",
-        beforeEnter(to, from, next) {
-          window.location = "http://line.com";
+  <div id="app">I'm yuma</div>
+
+  <script>
+    const router = new VueRouter({
+      routes: [
+        {
+          path: "/line",
+          beforeEnter(to, from, next) {
+            window.location = "http://line.com";
+          },
         },
-      },
-      {
-        path: "/page2",
-        template: "何もないよ",
-      },
-    ],
-  });
-  const app = new Vue({
-    el: "#app",
-    router: router,
-  }).$mount("#app");
-</script>
+        {
+          path: "/page2",
+          template: "何もないよ",
+        },
+      ],
+    });
+    const app = new Vue({
+      el: "#app",
+      router,
+    }).$mount("#app");
+  </script>
+</html>

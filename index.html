@@ -1,35 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <script>
-      (function (l) {
-        if (l.search) {
-          var q = {};
-          l.search
-            .slice(1)
-            .split("&")
-            .forEach(function (v) {
-              var a = v.split("=");
-              q[a[0]] = a[1];
-            });
-          if (q.p !== undefined) {
-            window.history.replaceState(
-              null,
-              null,
-              l.pathname.slice(0, -1) + (q.p || "")
-            );
-          }
-        }
-      })(window.location);
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src="https://unpkg.com/http-vue-loader"></script>
-  </head>
-
-  <div id="app">
-    <div class="main">I'm yuma!</div>
-  </div>
+  <div class="main">I'm yuma!</div>
 
   <style>
     .main {
@@ -40,27 +11,4 @@
       align-items: center;
     }
   </style>
-
-  <script>
-    const router = new VueRouter({
-      mode: "history",
-      routes: [
-        {
-          path: "/line",
-          beforeEnter(to, from, next) {
-            window.location = "https://line.me/ti/p/764oboOYfl";
-          },
-        },
-        {
-          path: "/hello",
-          template: "<div>hello</div>",
-        },
-      ],
-    });
-    const app = new Vue({
-      el: "#app",
-      title: "yuma page",
-      router,
-    }).$mount("#app");
-  </script>
 </html>

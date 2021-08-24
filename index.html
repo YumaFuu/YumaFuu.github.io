@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <div class="main">I'm yuma!</div>
+  <div id="app" class="main">
+    <div class="left"></div>
+    <div>I'm yuma!</div>
+    <div class="right" @click="clickRight()"></div>
+  </div>
 
   <style>
     .main {
       display: flex;
       width: 100%;
       height: 100vh;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
+    .left {
+      width: 40%;
+      height: 100vh;
+    }
+    .right {
+      width: 40%;
+      height: 100vh;
+    }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        msg: "Welcome",
+        right: 0,
+      },
+      methods: {
+        clickRight() {
+          this.right += 1;
+          if (this.right >= 5) {
+            this.right = 0;
+            window.location = "https://line.me/ti/p/764oboOYfl";
+          }
+        },
+      },
+    });
+  </script>
 </html>

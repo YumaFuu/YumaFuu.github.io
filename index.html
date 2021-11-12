@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <div id="app" class="main">
-    <div class="left"></div>
+  <div class="main">
     <div>I'm yuma!</div>
-    <div class="right" @click="clickRight()"></div>
   </div>
 
   <style>
-    html {
-      touch-action: manipulation;
-    }
     .main {
       display: flex;
       width: 100%;
@@ -18,33 +13,5 @@
       align-items: center;
       font-size: 20px;
     }
-    .left {
-      width: 40%;
-      height: 100vh;
-    }
-    .right {
-      width: 40%;
-      height: 100vh;
-    }
   </style>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-  <script>
-    new Vue({
-      el: "#app",
-      data: {
-        msg: "Welcome",
-        right: 0,
-      },
-      methods: {
-        clickRight() {
-          this.right += 1;
-          if (this.right >= 5) {
-            this.right = 0;
-            window.location = "https://line.me/ti/p/764oboOYfl";
-          }
-        },
-      },
-    });
-  </script>
 </html>

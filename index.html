@@ -6,6 +6,11 @@
       html {
         background-color: black;
       }
+      .main {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
       pre.bash {
         color: green;
         font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
@@ -14,7 +19,6 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        padding: 10px 50px;
       }
       a {
         text-decoration: none;
@@ -23,54 +27,56 @@
     </style>
   </head>
 
-  <div class="main">
-    <pre class="bash">
-      $ whoami
-      yuma
-      $ pwd
-      /home/yuma/introduction
-      $ ls -l
-      .r--------  56 yuma 30 May 18:09 company
-      .rwxr--r--  51 yuma 30 May 18:09 greet
-      .rw-r--r-- 184 yuma 30 May 18:09 profile
-      $ ./greet
-       _______
-      < Hello >
-       -------
-         \
-          \
-              .--.
-             |o_o |
-             |:_/ |
-            //   \ \
-           (|     | )
-          /'\_   _/`\
-          \___)=(___/
-      $ cat profile | jq
-      {
-        "name": "Yuma Ishikawa",
-        "age": 25,
-        "interest": [
-          "SRE",
-          "AWS",
-          "Terraform",
-          "Go",
-          "Deno"
-        ],
-        "tools": [
-          "Neovim",
-          "WezTerm"
-        ],
-        "sites": [
-          "<a href='https://twitter.com/yuma_katameoome'>https://twitter.com/yuma_katameoome</a>",
-          "<a href='https://github.com/yumafuu'>https://github.com/yumafuu</a>"
-        ]
-      }
-      $ cat company | jq
-      {
-        "name": "ispec-inc",
-        "homepage": "<a href='https://ispec.world'>https://ispec.world</a>"
-      }
-    </pre>
-  </div>
+  <body>
+    <div class="main">
+      <pre class="bash">
+$ whoami
+yuma
+$ pwd
+/home/yuma/introduction
+$ ls -l
+.r--------  56 yuma 30 May 18:09 company
+.rwxr--r--  51 yuma 30 May 18:09 greet
+.rw-r--r-- 184 yuma 30 May 18:09 profile
+$ ./greet
+ _______
+< Hello >
+ -------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+$ cat profile | jq
+{
+  "name": "Yuma Ishikawa",
+  "age": 25,
+  "interest": [
+    "SRE",
+    "AWS",
+    "Terraform",
+    "Go",
+    "Deno"
+  ],
+  "tools": [
+    "Neovim",
+    "WezTerm"
+  ],
+  "sites": [
+    "<a href='https://twitter.com/yuma_katameoome'>https://twitter.com/yuma_katameoome</a>",
+    "<a href='https://github.com/yumafuu'>https://github.com/yumafuu</a>"
+  ]
+}
+$ cat company | jq
+{
+  "name": "ispec-inc",
+  "homepage": "<a href='https://ispec.world'>https://ispec.world</a>"
+}
+      </pre>
+    </div>
+  </body>
 </html>
